@@ -15,10 +15,10 @@ app = Flask(__name__)
 def hello_world():
     GPIO.output(26, True);
     GPIO.output(19, True); 
-    return 
+    return "work"
 
 @app.route("/off")
 def hell():
     GPIO.output(26, False);
     GPIO.output(19, False); 
-    return 
+    return "work";
