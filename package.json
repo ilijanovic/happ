@@ -9,7 +9,7 @@
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --build --force",
-    "start": "run-p type-check \"build-only {@}\" -- && vite start"
+    "start": "run-p type-check \"build-only {@}\" -- && vite start && python -m flask --app app run"
   },
   "dependencies": {
     "vue": "^3.3.11"
