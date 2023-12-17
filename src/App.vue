@@ -1,10 +1,23 @@
 <script setup lang="ts">
 import buttonVue from "./components/button.vue";
+
+function turnOff() {
+  fetch("10.0.0.248/app/off");
+}
+
+function turnOn() {
+  fetch("10.0.0.248/app/on");
+}
 </script>
 
 <template>
-  <p>start</p>
-  <buttonVue>On</buttonVue>
+  <div class="border flex flex-col gap-4 p-4 shadow-md">
+    <h1>Premium App</h1>
+    <div class="flex gap-4 justify-between">
+      <buttonVue @click.native="turnOn">An</buttonVue>
+      <buttonVue @click.native="turnOff">Aus</buttonVue>
+    </div>
+  </div>
 </template>
 
 <style scoped>
