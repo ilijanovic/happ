@@ -18,7 +18,7 @@ def hello_world():
     return 
 
 @app.route("/off")
-def hello_world():
+def hell():
     GPIO.output(26, False);
     GPIO.output(19, False); 
     return 
