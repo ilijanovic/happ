@@ -12,16 +12,14 @@ app = Flask(__name__)
 
 @app.route("/on")
 def hello_world():
-    GPIO.setup(26, GPIO.OUT);
-    GPIO.setup(19, GPIO.OUT);
-    GPIO.output(26, True);
-    GPIO.output(19, True); 
-    return "work";
+  
+    GPIO.output(26, 1)
+    GPIO.output(19, 1)
+    return "work"
 
 @app.route("/off")
 def hell():
-    GPIO.setup(26, GPIO.OUT);
-    GPIO.setup(19, GPIO.OUT);
-    GPIO.output(26, False);
-    GPIO.output(19, False); 
-    return "work";
+   
+    GPIO.output(26, 0)
+    GPIO.output(19, 0)
+    return "work"
